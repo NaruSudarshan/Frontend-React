@@ -9,8 +9,20 @@ function App() {
   let [counter , setCounter] = useState(0)
 
   const addValue = () => {
-    // counter = counter + 1
+    // counter = counter + 1 // this wont update in ui
+
     setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+
+    // on one click only one value is changed 
+    // because useState sends changes in batches and send at once
+    // all 4 +1 are treated as a batch and because we are doing the same job so its considered only once
+
+    // but still if want to acheicve this we can do it using a call back function in setCounter
+    // setCounter(prevCounter => prevCounter + 1)
+    // setCounter(prevCounter => prevCounter + 1)
     console.log(counter)
   }
 
