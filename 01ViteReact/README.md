@@ -1,12 +1,12 @@
-# React + Vite
+# React project using Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- vite is just a bundler
 
-Currently, two official plugins are available:
+## flow of the project => index.html -> main.jsx -> App.jsx
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- in index.html we have a div with id root where our react app will be mounted
+- in main.jsx we import react and react-dom and use createRoot to mount our App component to the root div in index.html, createRoot creates a virtual DOM tree and only updates the changed parts of the real DOM
+- in App.jsx we define our main App component which is a functional component that returns JSX
+we import and use the Luffy component in App.jsx
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
