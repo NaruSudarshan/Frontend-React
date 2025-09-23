@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import { useLoaderData } from 'react-router'
+import React from 'react'
+import { useLoaderData } from 'react-router-dom'
+
 function Github() {
-  
-  // const [data,setData] = useState("")
+  // Using loader data instead of useEffect for better performance
   const data = useLoaderData()
-  useEffect(() => {
-    fetch('https://api.github.com/users/NaruSudarshan')
-    .then(response => response.json())
-    .then(data => {
-      // console.log(data)
-      setData(data)
-    })
-  })
+  
   return (
-    <div className='text-center m-4 bg-gray-600 text-white'>
-      GutHub followers : {data.followers}
+    <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>
+      <div className='text-center'>
+        <img src={data.avatar_url} alt="Git picture" width={300} className='rounded-full mx-auto mb-4' />
+      </div>
+      GitHub followers: {data.followers}
+      <br />
+      Name: {data.name}
     </div>
   )
 }
