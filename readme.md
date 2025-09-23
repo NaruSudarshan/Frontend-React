@@ -12,3 +12,8 @@
 [article](https://github.com/acdlite/react-fiber-architecture)
 - how often should react update the DOM by comparing the virtual DOM with the real DOM
 - using keys to identify element in a list is done to optimize the reconciliation process so that react can easily identify which elements have changed 
+
+## Redux
+- state management library for JS apps
+## react-redux
+- official react binding for redux
